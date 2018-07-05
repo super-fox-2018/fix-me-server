@@ -1,4 +1,4 @@
-const router = require('express').Router();
+const router = require('express').Router()
 
 router.get('/', function(req, res, next) {
   res
@@ -6,4 +6,4 @@ router.get('/', function(req, res, next) {
     .json( 'berhasil connect ke server' )
 });
 
-module.exports = router;
+module.exports = router
