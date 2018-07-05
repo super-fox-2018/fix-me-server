@@ -1,5 +1,11 @@
-const router = require('express');
-const { postWord } = require('./controllers/secretword');
+const express = require('express');
+const router = express.Router()
+const Controller = require('../controllers/secretword');
+
+
 /* GET users listing. */
-router.get('/', postWord);
+router.post('/', Controller.postWords);
+// console.log('controler masuk gak')
+
+module.exports = router
 
