@@ -1,5 +1,6 @@
-const router = require('express');
-const { postWord } = require('./controllers/secretword');
+const router = require('express').Router()
+const { postWord } = require('../controllers/secretword')
 /* GET users listing. */
-router.get('/', postWord);
+router.post('/', postWord)
 
+module.exports = router
