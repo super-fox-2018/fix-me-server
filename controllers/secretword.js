@@ -4,10 +4,10 @@ module.exports = {
   postWords :function (res, req) {
     
     let word = req.body.word;
-    let checkWord = data.words.filter( word => {
+    let checkWord = data.word.filter( word => {
       return word = word
     })
-    if ( checkWords ) {
+    if ( checkWord ) {
       res.
         status( 200 )
         .json( true )
