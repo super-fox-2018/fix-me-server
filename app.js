@@ -3,19 +3,34 @@ const path = require('path');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 
-const index = require('./routes/index');
-const secretwords = require('./routes/secretwords');
 
 const app = express();
 
+
+const index = require('./routes/index');
+const secretwords = require('./routes/secretwords');
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+
+
 // view engine setup
+app.set('view engine', 'ejs');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 
+
+const port = process.env.PORT || 3000;
+app.set('port', port);
+
+
 app.use('/', index);
 app.use('/katakunci', secretwords);
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -35,5 +50,10 @@ app.use(function(err, req, res, next) {
     .status(err.status || 500)
     .json( 'anda tersesat begitu dalam' )
 });
+
+
+app.listen(port);
+
+
 
 module.exports = app;
