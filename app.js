@@ -2,12 +2,16 @@ const express = require('express');
 const path = require('path');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
+const cors = require('cors')
+
+const app = express();
 
 const index = require('./routes/index');
 const secretwords = require('./routes/secretwords');
 
-const app = express();
-
+app.use(cors())
+app.use(express.json())
+app.use(express.urlencoded({ extended: false }))
 // view engine setup
 
 // uncomment after placing your favicon in /public
