@@ -2,12 +2,11 @@ const data = require('../data.json')
 
 module.exports = {
   postWords: function (req, res) {
-    console.log('masukkkkk')
-    let word = req.body.word
+    let words = req.body.word
     let checkWord = data.words.filter( word => {
-      return word = word
+      return words = word
     })
-    
+
     if (checkWord) {
       res.
         status( 200 )
