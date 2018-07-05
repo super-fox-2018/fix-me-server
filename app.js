@@ -2,11 +2,11 @@ const express = require('express');
 const path = require('path');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
-
-const index = require('./routes/index');
-const secretwords = require('./routes/secretwords');
-
 const app = express();
+const index = require('./routes/index.js');
+const secretwords = require('./routes/secretwords.js');
+
+
 
 // view engine setup
 
