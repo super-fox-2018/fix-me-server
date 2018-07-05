@@ -13,9 +13,9 @@ module.exports = {
        }
     })
     if (checkWord.length > 0) {
-      res.status( 200 ).json( {"data":true} )
+      res.status( 200 ).json( true )
     } else {
-      res.status( 400 ).json( {"data":false} )
+      res.status( 400 ).json( false )
     }
   }
 }
