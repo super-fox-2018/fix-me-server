@@ -4,7 +4,7 @@ module.exports = {
   postWords :function (res, req) {
     
     let word = req.body.word;
-    let checkWord = data.word.filter( word => {
+    let checkWord = word.filter( word => {
       return word = word
     })
     if ( checkWord ) {
