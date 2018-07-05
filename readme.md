@@ -9,4 +9,4 @@ tugas endpoint ini cukup gampang dia hanya mengecek apakah kata yang dikirim ada
 
 untuk contoh yang sudah jadi ada di
 
-[contoh web server](http://52.221.191.154/katakunci)
+[contoh web server](http://35.198.212.170/katakunci)
