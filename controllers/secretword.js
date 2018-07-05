@@ -1,20 +1,17 @@
-const { data } = require('../data.json')
+const { words } = require('../data.json')
 
-module.export = [
-  postWords : function (res, req) {
+module.exports = {
+  postWords: (req,res) => {
     let word = req.body.word;
-    let checkWord = data.words.filter( word => {
-      return word = word
-    })
-    if ( checkWords ) {
+    let checkWord = words.filter(x => x === word)
+    if (checkWord.length !== 0) {
       res.
-        status( 200 )
-        .json( true )
+        status(200)
+        .json(true)
     } else {
       res
-        .status( 400 );
-        .json( false )
+        .status(400)
+        .json(false)
     }
   }
-
-]
+}
