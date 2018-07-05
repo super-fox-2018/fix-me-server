@@ -1,7 +1,8 @@
 const { data } = require('../data.json')
 
-module.export = [
-  postWords : function (res, req) {
+module.exports = {
+  postWords :function (res, req) {
+    
     let word = req.body.word;
     let checkWord = data.words.filter( word => {
       return word = word
@@ -12,9 +13,9 @@ module.export = [
         .json( true )
     } else {
       res
-        .status( 400 );
+        .status( 400 )
         .json( false )
     }
   }
 
-]
+}
